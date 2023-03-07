@@ -1,9 +1,15 @@
 import React from 'react'
+import TodoItem  from "./TodoItem";
 
-const Todos = () => {
+const Todos = (props) => {
   return (
     <div>
-      todos work perfectly...
+    <h2 className='text-center'>Todo List</h2>
+    {
+      props.todos.map((todo) =>{
+      return <TodoItem todo = {todo}/>
+    })
+  }
     </div>
   )
 }
