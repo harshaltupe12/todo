@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Mycomponents/Navbar';
+import Todos from './Mycomponents/Todos';
+import Footer from './Mycomponents/Footer';
 function App() {
+  let todo = [{
+    sn: 1,
+    title: "Goto Market",
+    description: "from market you have to Purchase some Vegitables for tomarrows dinners."
+  }]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar title = "My-Todo"/>
+      <Todos/>
+      <Footer/>
     </div>
   );
 }
