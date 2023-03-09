@@ -1,15 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types'
-
 
 export default function Navbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand"  >
-            {props.title}
-          </a>
+          <a className="navbar-brand">{props.title}</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,9 +25,7 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link">
-                  About
-                </a>
+                <a className="nav-link">About</a>
               </li>
             </ul>
           </div>
@@ -42,5 +36,5 @@ export default function Navbar(props) {
 }
 
 Navbar.defaultProps = {
-    title : "Your Title"
-}
+  title: "Your Title",
+};
