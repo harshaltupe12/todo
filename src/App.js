@@ -2,11 +2,16 @@ import './App.css';
 import Navbar from './Mycomponents/Navbar';
 import Todos from './Mycomponents/Todos';
 import Footer from './Mycomponents/Footer';
+import React, { useState } from 'react';
 function App() {
-  const onDelete = (todo) =>{
+  const onDelete = (todo)=>{
     console.log("Delete Button Works MF!! ",todo);
+    setTodos(todos.filter((e)=>{
+      return e!==todo;
+    }))
   }
-  let todos = [
+
+  const [todos, setTodos] = useState([
     {
     sno: 1,
     title: "Goto Market",
@@ -23,9 +28,8 @@ function App() {
       title: "Goto Street",
       desc: "from street you have to Purchase some Vegitables for tomarrows dinners."
     },
+]);
 
-
-]
   return (
     <div>
       <Navbar title = "My-Todo"/>
