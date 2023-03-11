@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Mycomponents/Navbar';
 import Todos from './Mycomponents/Todos';
 import Footer from './Mycomponents/Footer';
+import { AddTodo } from './Mycomponents/AddTodo';
 import React, { useState } from 'react';
 function App() {
   const onDelete = (todo)=>{
@@ -33,6 +34,7 @@ function App() {
   return (
     <div>
       <Navbar title = "My-Todo"/>
+      <AddTodo/>
       <Todos todos = {todos} key={todos.sno} onDelete = {onDelete}/>
       <Footer/>
     </div>
