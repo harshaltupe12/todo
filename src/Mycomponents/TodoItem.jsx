@@ -1,5 +1,4 @@
 import React from 'react'
-
 const TodoItem = ({todo, onDelete}) => {
   return (
     <div className="m-5 mb-1 mt-2">
@@ -9,5 +8,4 @@ const TodoItem = ({todo, onDelete}) => {
     </div>
   )
 }
-
 export default TodoItem
