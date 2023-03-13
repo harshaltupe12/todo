@@ -12,11 +12,22 @@ function App() {
     }))
   }
 
+  let addTodo = (title, desc) => {
+    let sno = todos[todos.length-1].sno+1;
+    const myTodo = {
+      sno:sno,
+      title:title,
+      desc:desc
+    }
+    console.log(myTodo);
+    setTodos([...todos,myTodo]);
+  }
+
   const [todos, setTodos] = useState([
     {
     sno: 1,
     title: "Goto Market",
-    desc: "from market you have to Purchase some Vegitables for tomarrows dinners."
+    desc: "from market you have to Purchase some Vegetables for tomorrows dinners."
     },
     {
       sno: 2,
@@ -34,7 +45,7 @@ function App() {
   return (
     <div>
       <Navbar title = "My-Todo"/>
-      <AddTodo/>
+      <AddTodo addTodo={addTodo}/>
       <Todos todos = {todos} key={todos.sno} onDelete = {onDelete}/>
       <Footer/>
     </div>
