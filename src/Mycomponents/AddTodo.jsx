@@ -1,7 +1,7 @@
 import { useState } from "react"
 import React  from 'react'
 
-export const AddTodo = () => {
+export const AddTodo = (props) => {
     let FormStyle = {
         marginTop : "40px",
         marginLeft : "38px",
@@ -16,7 +16,8 @@ export const AddTodo = () => {
         if(!title || !desc){
             alert("Title And Description cannot be blank");
         }
-
+        else{props.addTodo(title, desc);}
+        
     }
   return (
     <div>
