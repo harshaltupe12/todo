@@ -3,7 +3,7 @@ import TodoItem  from "./TodoItem";
 const Todos = (props) => {
   return (
     <div>
-      <h1 className='m-4'>Todo List</h1>
+      <h1 className='m-4'>Todo List </h1>
       { props.todos.length===0 ? "No Todo To Display Chala Jaa BSDK":
         props.todos.map((todo) =>{
         return( 
